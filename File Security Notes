@@ -1,0 +1,29 @@
+See sources below
+
+Streamlit takes several measures to protect the privacy and security of uploaded files, but it's important to understand how the system handles data:
+
+Files uploaded through Streamlit's file uploader (st.file_uploader) are not stored permanently by default. When a user uploads a file, it is sent from the client (browser) to the server and held in memory. The data is not automatically saved to disk unless you explicitly program your app to do so.
+
+If you deploy your app on Streamlit Community Cloud, the files in your GitHub repository are copied into a container that executes your app's Python code. Any files saved by your app would be stored in this container.
+
+Streamlit uses encryption for data in transit and at rest. All communication with Streamlit apps is encrypted using TLS 1.2 or better.
+
+Streamlit Community Cloud requires authentication, with permissions inherited from GitHub, ensuring that only authorized users can deploy or manage apps.
+
+Streamlit is committed to data privacy and security. They have previously been SOC 2 Type 1 compliant, focusing on security and confidentiality.
+
+Streamlit's infrastructure is hosted on secure data centers, leveraging cloud providers' built-in security features.
+
+Users can delete their apps and accounts, which triggers the deletion of their data, although some metadata may be retained.
+
+However, it's crucial to note that while Streamlit provides these security measures, they do not guarantee absolute security for sensitive data. If you're handling highly sensitive information, you should consider additional security measures or consult with Streamlit directly about your specific use case.
+In summary, documents uploaded to Streamlit are not intentionally made public, and Streamlit has measures in place to protect data privacy. However, the level of security may depend on how you've configured your app and where it's deployed.
+
+
+SOURCES:
+
+https://discuss.streamlit.io/t/security-and-privacy/48807
+https://www.restack.io/docs/streamlit-knowledge-streamlit-privacy-overview
+https://discuss.streamlit.io/t/is-file-uploader-secure-enough-for-sensitive-data/2651
+https://streamlit.io/privacy-policy
+https://discuss.streamlit.io/t/data-privacy-data-protection-for-uploaded-files/59541
